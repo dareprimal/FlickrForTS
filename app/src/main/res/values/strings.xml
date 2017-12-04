@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Flickr Public Feed</string>
+
+    <string name="cd_tag_icon">tag icon</string>
+    <string name="cd_photo_from_feed">Photo from feed.</string>
+    <string name="cd_date_icon">Date icon.</string>
+
 </resources>
