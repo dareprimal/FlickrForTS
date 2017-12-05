@@ -9,7 +9,6 @@ import retrofit2.http.Headers
  * Created by Michal S. on 05.12.2017.
  */
 interface PublicFeedApi {
-    @get:Headers("format: json" )
-    @get:GET("feeds/photos_public.gne")
+    @get:GET("feeds/photos_public.gne?format=json&nojsoncallback=1")
     val publicFeed: Single<PublicFeedJsonResponse>
 }
