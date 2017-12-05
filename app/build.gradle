@@ -15,8 +15,12 @@ android {
         buildConfigField "String", "API_URL", "\"https://api.flickr.com/services/\""
         //remove not supported translations:
         resConfigs "en"
-
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             shrinkResources true
@@ -32,9 +36,15 @@ dependencies {
     //Kotlin
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
+    //databinding
+    kapt 'com.android.databinding:compiler:3.0.1'
+
     //Ui components
     implementation "com.android.support:appcompat-v7:$supporLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //arch. components
+    implementation "android.arch.lifecycle:extensions:1.0.0"
 
     //RxJava
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
