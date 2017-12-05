@@ -20,7 +20,9 @@
             android:id="@+id/public_feed_swipe_refresh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:isLoadingBind="@{listViewModel.isLoading}"
+            app:refreshBind="@{listViewModel}">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/public_feed_recycler"
