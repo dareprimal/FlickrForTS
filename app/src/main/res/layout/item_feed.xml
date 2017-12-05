@@ -57,6 +57,7 @@
             android:layout_margin="@dimen/margin_small"
             android:lines="1"
             android:textSize="@dimen/text_small_font_size"
+            app:tagsBind="@{itemViewModel.publicFeedItem.tags}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/photo_date_iv"
             app:layout_constraintHorizontal_bias="0.5"
@@ -81,6 +82,7 @@
             android:layout_margin="@dimen/margin_small"
             android:lines="1"
             android:textSize="@dimen/text_small_font_size"
+            app:publishedDateBind="@{itemViewModel.publicFeedItem.publishedDate}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/photo_date_iv" />
