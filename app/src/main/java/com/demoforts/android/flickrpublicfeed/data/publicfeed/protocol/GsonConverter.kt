@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 /**
  * Created by Michal S. on 05.12.2017.
  */
-object GsonConverter {
+internal object GsonConverter {
 
     private var gsonConverter: GsonConverterFactory =
             GsonConverterFactory.create(GsonBuilder().create())
