@@ -11,10 +11,10 @@ import java.util.Date
  */
 fun PublicFeedItemJsonResponse.getPublishedDate(): Date? {
     val datePattern = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-    val dateFormater: DateFormat = java.text.SimpleDateFormat(datePattern, java.util.Locale.getDefault())
+    val dateFormatter: DateFormat = java.text.SimpleDateFormat(datePattern, java.util.Locale.getDefault())
     published?.let {
         return try {
-            dateFormater.parse(it)
+            dateFormatter.parse(it)
         } catch (e: ParseException) {
             null
         }

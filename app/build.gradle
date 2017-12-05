@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
@@ -42,6 +43,8 @@ dependencies {
     //Ui components
     implementation "com.android.support:appcompat-v7:$supporLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.android.support:recyclerview-v7:$supporLibraryVersion"
+    implementation "com.android.support:design:$supporLibraryVersion"
 
     //arch. components
     implementation "android.arch.lifecycle:extensions:1.0.0"
