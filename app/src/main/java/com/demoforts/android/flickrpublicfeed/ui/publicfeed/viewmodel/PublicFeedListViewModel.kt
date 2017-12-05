@@ -13,9 +13,12 @@ import io.reactivex.disposables.CompositeDisposable
  * Created by Michal S. on 05.12.2017.
  */
 class PublicFeedListViewModel : ViewModel() {
+
+    val isLoading = ObservableField(false)
+    val onError = ObservableField<Throwable>()
+
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
     private val dataSource = PublicFeedData()
-    val isLoading = ObservableField(false)
 
     var items: ObservableList<PublicFeedItem> = ObservableArrayList()
 
@@ -35,6 +38,7 @@ class PublicFeedListViewModel : ViewModel() {
                                 items.addAll(it)
                             }
                         }, {
+                            onError.set(it)
                             isLoading.set(false)
                         })
         )
