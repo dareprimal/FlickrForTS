@@ -19,6 +19,7 @@
             android:layout_height="@dimen/size_photo_on_list_height"
             android:contentDescription="@string/cd_photo_from_feed"
             android:scaleType="fitCenter"
+            app:imageBind="@{itemViewModel.publicFeedItem.imageUrl}"
             app:layout_constraintBottom_toTopOf="@+id/photo_title_tv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
